@@ -12,6 +12,7 @@ phases:
       - echo Build started on `date`
       - mkdir -p output/scripts
       - cp index.html output/
+      - cp style.css output/
       - cp appspec.yml output/
       - cp -r scripts/* output/scripts
 
