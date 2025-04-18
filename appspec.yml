@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
 
-file: 
-  - sources: /
-  - destinations: /var/www/html
+files: 
+  - source: /
+    destination: /var/www/html
 
 hooks:
   AfterInstall:
@@ -11,7 +11,7 @@ hooks:
     timeout: 300
     runas: root
 
-  ApplicatiionStart:
+  ApplicationStart:
   - location: scripts/start_nginx.sh
     timeout: 300
     runas: root
