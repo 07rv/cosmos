@@ -10,7 +10,10 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - cp index.html /var/www/html/
+      - mkdir -p output/scripts
+      - cp index.html output/
+      - cp appspec.yml output/
+      - cp -r scripts/* output/scripts
 
   post_build:
     commands:
@@ -18,4 +21,4 @@ phases:
 
 artifacts:
   files:
-    - /**/*
+    - output/**/*
